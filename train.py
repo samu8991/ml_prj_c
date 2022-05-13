@@ -30,7 +30,7 @@ if __name__ == "__main__":
     print("Used memory:", info.used)
 
     dataset_train = FacialDataset('/content/drive/MyDrive/dataset', get_transform(horizontal_flip=True))
-    dataset_test = FacialDataset('/content/drive/MyDrive/dataset' get_transform(horizontal_flip=False))
+    dataset_test = FacialDataset('/content/drive/MyDrive/dataset',get_transform(horizontal_flip=False))
 
     data_loader_train = torch.utils.data.DataLoader(
             dataset_train, batch_size=batch_size, shuffle=True, drop_last=True, num_workers=0,
